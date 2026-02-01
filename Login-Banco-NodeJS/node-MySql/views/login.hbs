@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="\style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/89e4b40e97.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <!--Barra Superior-->
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="accesibilidad">
+                    <span style="font-size: 20px;color: #008acc;cursor: pointer;"><i class="bi bi-sun"
+                            style="padding-right: 20px;"></i><i class="bi bi-type"></i></span>
+                </div>
+                <div class="top-links">
+                    <a href="#">Haz tus pagos</a>
+                    <a href="#">Sostenibilidad</a>
+                    <a href="#">Contáctanos</a>
+                    <a href="#">Oficinas y Cajeros</a>
+                    <a href="#">Quiénes Somos</a>
+                    <a href="#">Transparencia</a>
+                    <button id="logoutButton" class="conoce-button">Cerrar Sesion</button>
+                    <i class="bi bi-search" style="color:#008acc;margin-left: 4px;font-size: 14px;cursor: pointer;"></i>
+                </div>
+            </div>
+        </div>
+        <!--Main Menu-->
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="\img\logo-bocc-gptw.svg">
+            </div>
+            <div class="nav-links">
+                <a href="#">Personas</a>
+                <a href="#">Empresas</a>
+            </div>
+            <div class="dropdowns-main-simula">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle"
+                        style="color: #008acc; border: 1px solid #008acc;background: transparent;" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Simula y Solicita
+                    </button>
+                    <ul class="dropdown-menu" style="background-color: white;">
+                        <li><a class="dropdown-item" href="#">Simula y solicita en Línea</a></li>
+                        <li><a class="dropdown-item" href="#">Hazte cliente persona</a></li>
+                        <li><a class="dropdown-item" href="#">Hazte cliente empresa</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdowns-main-transaccion">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle"
+                        style="color: #008acc; border: 1px solid #008acc;background: transparent;" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Transacciones
+                    </button>
+                    <ul class="dropdown-menu" style="background-color: white;">
+                        <li><a class="dropdown-item" href="#">Portal Transaccional</a></li>
+                        <li><a class="dropdown-item" href="#">OcciRed</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--HeaderTelefono-->
+    <section class="head-cel">
+        <div class="menu-responsive">
+            <div>
+                <nav class="navbar bg-body-tertiary fixed-top"
+                    style="margin-top: 3%;margin-left: 4%; width:0px;height: 0px;">
+                    <div class="container-fluid" style="background-color:transparent;">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation"
+                            style="background-color:transparent; border-color:transparent;">
+                            <span class="navbar-toggler-icon" style="width: 25px;height: 15 px;"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+            <div style="margin-left: 25%;margin-top: 7%;font-size: 20px;">
+                <i class="bi bi-brightness-high"></i>
+
+            </div>
+            <div style="margin: auto;margin-left: 12%;"><img src="\img\logo-banco.png" alt="" style="width: 60px;">
+            </div>
+            <div style="margin-right: 3%;margin-top: 7%;font-size: 20px;width: 100px; display: flex;">
+                <i class="bi bi-search"></i>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle"
+                        style="color:#002449; border: 1px solid transparent;background: transparent;padding: 0; padding-left: 20px;"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-person-circle" style="margin-left: 25%;"></i>
+                    </button>
+                    <ul class="dropdown-menu" style="background-color: white;">
+                        <li><a class="dropdown-item" href="#">Portal Transaccional</a></li>
+                        <li><a class="dropdown-item" href="#">OcciRed</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!--Menu Hamburguesa-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+        style="backdrop-filter: blur(22px);background: hsla(0, 0%, 97%, .6);">
+        <div class="offcanvas-header" style="margin-top:25%;">
+            <button class="button-offcanvas">Personas</button>
+            <button class="button-offcanvas"
+                style="background-color:transparent;color:#002449; border-color:#002449;">Empresas</button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"
+                            style="border-radius: 5px; color:#002449">
+                            Productos digitales
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Cuenta de Ahorros</p>
+                            <p>Crédito de Vehículo</p>
+                            <p>Libre Inversión</p>
+                            <p>Vivienda</p>
+                            <p>Dale! para Personas</p>
+                            <p>Hazte Cliente</p>
+                            <p>Carroya</p>
+                            <p>Seguros Voluntarios</p>
+                            <p>Educación Financiera</p>
+                            <p>Garage Occiauto</p>
+                            <p>Seguro Todo Riesgo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                            style="border-radius: 5px; margin-top: 3%;color:#002449">
+                            Tarjeta de Crédito
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Nuestras Tarjetas</p>
+                            <p>Consulta Ágil</p>
+                            <p>Promociones y Novedades</p>
+                            <p>Tuplús</p>
+                            <p>Fechas de Pago</p>
+                            <p>Compra de Cartera</p>
+                            <p>Paquete Mínimo de Servicios</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree" style="border-radius: 5px;margin-top: 3%;color:#002449">
+                            Créditos
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Libre Inversión</p>
+                            <p>Occiauto</p>
+                            <p>Vivienda</p>
+                            <p>Libranza</p>
+                            <p>Cartera Ordinaria</p>
+                            <p>Portafolios Integrales</p>
+                            <p>Crédito con Pensiones Voluntarias</p>
+                            <p>Préstamo Personal Dinámico</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFour" aria-expanded="false"
+                            aria-controls="flush-collapseFour" style="border-radius: 5px;margin-top: 3%;color:#002449">
+                            Seguros
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Emermédica</p>
+                            <p>Vivienda</p>
+                            <p>Viajes</p>
+                            <p>Vehículos</p>
+                            <p>Personas</p>
+                            <p>Mascotas</p>
+                            <p>Asistencia IGS</p>
+                            <p>Asistencia Assisprex</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseFive" aria-expanded="false"
+                            aria-controls="flush-collapseFive" style="border-radius: 5px;margin-top: 3%;color:#002449">
+                            Ahorra e Invierte
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Cuenta de Ahorros</p>
+                            <p>Cuenta de Nómina</p>
+                            <p>CDT</p>
+                            <p>Cuenta Corriente</p>
+                            <p>Cuenta de Pensión</p>
+                            <p>Remesas en Línea</p>
+                            <p>Inversión y Administración de Activos</p>
+                            <p>Invierte en el exterior</p>
+                            <p>Cuenta AFC</p>
+                            <p>Tarjeta Débito Activa</p>
+                            <p>Cuentas para Políticos</p>
+                            <p>Paquete Servicio Básico</p>
+                            <p>Venta de Usados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix"
+                            style="border-radius: 5px;margin-top: 3%;color:#002449">
+                            Nuestros Canales
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Corresponsales</p>
+                            <p>Líneas de Servicio al Cliente</p>
+                            <p>Dale! para Personas</p>
+                            <p>Portal Transaccional</p>
+                            <p>Asesoría en Negociación y Conciliación</p>
+                            <p>Visación Digital Libranza</p>
+                            <p>Banca Móvil</p>
+                            <p>WhatsApp</p>
+                            <p>Encuentra Oficinas y Corresponsales</p>
+                            <p>AvalPay Center</p>
+                            <p>Extracto Digital</p>
+                            <p>Seguridad y Fraude</p>
+                            <p>Canales Digitales</p>
+                            <p>Tag Aval</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseSeven" aria-expanded="false"
+                            aria-controls="flush-collapseSeven" style="border-radius: 5px;margin-top: 3%;color:#002449">
+                            Mesa de dinero
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Occieconomicas</p>
+                            <p>Instrucciones Permanentes</p>
+                            <p>Operaciones Cambiarias</p>
+                            <p>Inversión</p>
+                            <p>Cobertura de Tasas de Cambio</p>
+                            <p>Cobertura de Tasas de interés</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item" style="background-color: transparent;">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseEigth" aria-expanded="false"
+                            aria-controls="flush-collapseEigth" style="border-radius: 5px;margin-top: 3%;color:#002449">
+                            Segmentos
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEigth" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <p>Élite Plus</p>
+                            <p>Élite</p>
+                            <p>Preferente Plus</p>
+                            <p>Preferente</p>
+                            <p>Mi Grupo es AVAL</p>
+                            <p>Grupos de interés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------->
+
+
+    <!--Primer Carrusel-->
+    <section class="Primer-Carrusel">
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                    class="fa-solid fa-diamond active" aria-current="true" aria-label="Slide 1"
+                    style="background-color: #008acc;border: 1.5px solid white;">
+                    <i class="bi bi-diamond-fill"></i>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2" style="background-color: #008acc;border: 1.5px solid white;">
+                    <i class="bi bi-diamond-fill"></i>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3" style="background-color: #008acc;border: 1.5px solid white;">
+                    <i class="bi bi-diamond-fill"></i>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4" style="background-color: #008acc;border: 1.5px solid white;">
+                    <i class="bi bi-diamond-fill"></i>
+                </button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5" style="background-color: #008acc;border: 1.5px solid white;">
+                    <i class="bi bi-diamond-fill"></i>
+                </button>
+
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="imgweb">
+                        <img src="\img\1.webp" class="d-block w-100 " alt="...">
+                    </div>
+                    <div class="imgcel">
+                        <img src="\img\cel1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"
+                        style="color:white; margin-left: -12%;margin-bottom: 12%; text-align: left;width: 30%;">
+
+                        <h2 style="font-weight: bold;">
+                            {{#if message }}
+                            {{#if data_user }}
+                            <h2 style="font-weight: bold; font-size: 40px;"><i class="bi bi-caret-right-fill" style="color:#002449;margin-top:100%;"></i>{{message}} {{data_user.name}} </h2>
+                            {{/if}}
+                            {{/if}}
+                            ㅤㅤa nuestra página web...
+                        </h2>
+                        <p style="margin-left: 3%;">ㅤMás ágil, más clara, más rápida y hecha para ti.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="imgweb">
+                        <img src="\img\2.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="imgcel">
+                        <img src="\img\cel2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"
+                        style="color:#002449; margin-left: -12%;margin-bottom: 12%; text-align: left;">
+
+                        <h2 style="font-weight: bold;"><i class="bi bi-caret-right-fill" style="color: #008acc;"></i>
+                            Crédito de Libre Inversión</h2>
+                        <p style="margin-left: 3%;">Ese viaje soñado TE ESPERA
+                        </p>
+                        <button class="buton-carrucel">Solicitalo aquí</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="imgweb">
+                        <img src="\img\3.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="imgcel">
+                        <img src="\img\cel3.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"
+                        style="color:white; margin-left: -12%;margin-bottom: 8%; text-align: left;">
+
+                        <h2 style="font-weight: bold;"><i class="bi bi-caret-right-fill" style="color:#002449"></i>CDT
+                            al 10% E.A.*</h2>
+                        <p style="margin-left: 3%;">Te ayudamos a ahorrar y a cumplir tus metas
+                        </p>
+                        <button class="buton-carrucel" style="background-color: white;color:#002449;">Solicitalo
+                            aquí</button>
+                        <p style="margin-left: 3%;">*Aplican términos y condiciones.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="imgweb">
+                        <img src="\img\4.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="imgcel">
+                        <img src="\img\cel4.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"
+                        style="color:#002449; margin-left: -12%;margin-bottom: 12%; text-align: left;">
+
+                        <h2 style="font-weight: bold;"><i class="bi bi-caret-right-fill"
+                                style="color: #008acc;"></i>Crédito de Vehículos Occiauto</h2>
+                        <p style="margin-left: 3%;">haz realidad tu sueño de estrenar carro. ¡Solicita tu crédito ahora!
+                        </p>
+                        <button class="buton-carrucel">Solicitalo aquí</button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="imgweb">
+                        <img src="\img\5.webp" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="imgcel">
+                        <img src="\img\cel5.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-caption d-none d-md-block"
+                        style="color:#002449; margin-left: -12%;margin-bottom: 8%; text-align: left;width: 33%;">
+
+                        <h2 style="font-weight: bold;"><i class="bi bi-caret-right-fill"
+                                style="color:#002449;"></i>Creemos en el potencial de las <span
+                                style="color: #008acc;font-size: 40px;">ㅤpymes</span></h2>
+                        <p style="margin-left: 3%;">Únete a nuestra Comunidad Empresarial para conectar con empresarios
+                            y nuevas oportunidades.
+                        </p>
+                        <button class="buton-carrucel" style="background-color:#008acc;color:white;">Conoce más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------------------->
+    </section>
+
+    <section class="A-Unclick">
+        <div class="A-Unclick-content">
+            <h1>Tu banco a un clic</h1>
+        </div>
+        <div class="A-Unclick-content" style="margin-top: 2%;">
+            <p>¿Qué podemos hacer por ti hoy?</p>
+        </div>
+        <!--Segundo Carrusel con iconos-->
+        <div class="Carrusel">
+            <div style="margin-top:50px; cursor: pointer;" class="flecha-izq1"><a id="btn-left-carrusel-1"><i
+                        class="fa-solid fa-chevron-left"></i></a></div>
+            <div class="Carrusel-Opciones" id="carrusel-1">
+
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <p>Quiero abrir</p>
+                        <p class="under-TextCarrusel">Mi cuenta de ahorros</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Quiero mi crédito</p>
+                        <p class="under-TextCarrusel">Vivienda</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="fa-solid fa-circle-dollar-to-slot"></i>
+                        <p>Quiero mi crédito</p>
+                        <p class="under-TextCarrusel">Libre inversión digital</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="fa-solid fa-car"></i>
+                        <p>Quiero mi</p>
+                        <p class="under-TextCarrusel">Crédito de vehículo</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p>Quiero pagar mi</p>
+                        <p class="under-TextCarrusel">Tarjeta de Crédito</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <img src="\img\pse.png" alt="">
+                        <p>Quiero hacer</p>
+                        <p class="under-TextCarrusel">Pagos por PSE</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="bi bi-bar-chart-fill"></i>
+                        <p>Quiero abrir Mi</p>
+                        <p class="under-TextCarrusel">Fondo de Inversión</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <img src="\img\dale.png" alt="">
+                        <p>Quiero abrir</p>
+                        <p class="under-TextCarrusel">Mi depósito dale!</p>
+                    </div>
+                </div>
+                <div class="Elementos-Carrusel">
+                    <div class="Texto-Carrusel">
+                        <i class="fa-regular fa-user"></i>
+                        <p>Tengo una petición,</p>
+                        <p class="under-TextCarrusel">Queja o reclamo</p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:50px;margin-right: -50px;" class="flecha-drch1">
+                <a id="btn-right-carrusel-1" style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+        <!--------------------->
+    </section>
+
+    <section class="Conoce">
+        <div class="A-Unclick-content">
+            <h1>Conoce</h1>
+        </div>
+        <div class="A-Unclick-content" style="margin-top: 0%;">
+            <p>Los productos que hemos preparado para ti</p>
+        </div>
+
+        <div class="img-conoce">
+            <div class="img-conoce-content" style="margin-left:10%;margin-right: 1%;">
+                <div style="margin-left: 4%;margin-top: 8%;" class="conoce-content-text">
+                    <p class="conce-Tittle">Crédito de vivienda</p>
+                    <p class="conoce-text">¡Haz realidad el hogar que siempre soñaste!</p>
+                    <button class="conoce-button">Solicítalo aquí</button>
+                </div>
+                <div style="margin-left: 18%;" class="img-conteiner"><img src="\img\conoce-1.webp" alt=""></div>
+            </div>
+
+            <div class="img-conoce-content under-content" style="margin-left:1%;">
+                <div style="margin-left: 3%;margin-top: 4%;" class="conoce-content-text">
+                    <p class="conce-Tittle">¡Es tiempo de pagar tus impuestos
+                        en el Banco de Occidente</p>
+                    <p class="conoce-text">Conoce todas las fechas,medios y puntos de pago</p>
+                    <button class="conoce-button" style="margin-top: 2%;">Conoce más</button>
+                </div>
+                <div class="img-conteiner"><img src="\img\conoce-2.webp" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interesa">
+        <div class="A-Unclick-content">
+            <h1>Te puede interesar</h1>
+        </div>
+        <div class="A-Unclick-content" style="margin-top: 0%;">
+            <p>Conoce las novedades que tenemos para ti </p>
+        </div>
+        <!--Tercer Carrusel-->
+        <div class="carrusel-interesa">
+            <div class="carrusel-interesa-opciones" id="carrusel-2">
+                <div class="carrusel-interesa-Elementos">
+                    <div>
+                        <img src="\img\interesa-1.webp" class="carousel-interesa-img">
+                        <div class="Texto-Carrusel-interesa">
+                            <h3 style="margin-top: 10%; font-size: 20px;color: #002449;">Asamblea General Ordinario</h3>
+                            <p style="font-size: 14px;color: #141414 "> <span
+                                    style="font-weight: bold;line-height: 22px;font-size: 16px;">Banco de Occidente
+                                    S.A.,convoca a sus accionistas a la Asamblea General Ordinaria,</span>
+                                que se celebrará el miércoles 26 de marzo de 2025 a las 3:00 p.m., en la Carrera 3 No.
+                                8-13, piso 4, Sala Múltiple 3 y 4, en la ciudad de Cali.</p>
+                            <button class="button-interesa">Conoce más</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="carrusel-interesa-Elementos">
+                    <div>
+                        <img src="\img\interesa-2.webp" class="carousel-interesa-img">
+                        <div class="Texto-Carrusel-interesa">
+                            <h3 style="margin-top: 10%; font-size: 20px;color: #002449;">Segmento Mi Grupo es AVAL</h3>
+                            <p style="font-size: 14px;color: #141414 ">
+                                Estamos de tu lado con beneficios exclusivos para que tu y tu familia cumplan todas sus
+                                metas.
+                                <span style="font-weight: bold;line-height: 22px;font-size: 16px;">Juntos hacemos
+                                    más</span>
+                            </p>
+                            <button class="button-interesa">Conoce más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-interesa-Elementos">
+                    <div>
+                        <img src="\img\interesa-3.webp" class="carousel-interesa-img">
+                        <div class="Texto-Carrusel-interesa">
+                            <h3 style="margin-top: 10%; font-size: 20px;color: #002449;">¡Es tiempo de pagar tus
+                                impuestos en el Banco de Occidente!</h3>
+                            <p style="font-size: 14px;color: #141414 "> <span
+                                    style="font-weight: bold;line-height: 22px;font-size: 16px;"></span>
+                                Conoce todas las fechas, medios y puntos de pago</p>
+                            <button class="button-interesa">Conoce más</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrusel-interesa-Elementos">
+                    <div>
+                        <img src="\img\interesa-4.webp" class="carousel-interesa-img">
+                        <div class="Texto-Carrusel-interesa">
+                            <h3 style="margin-top: 10%; font-size: 20px;color: #002449;">Tarifas 2025</h3>
+                            <p style="font-size: 14px;color: #141414 "> <span
+                                    style="font-weight: bold;line-height: 22px;font-size: 16px;"></span>
+                                Conoce las tarifas que regirán a partir de noviembre 2024 hasta noviembre 2025</p>
+                            <button class="button-interesa">Conoce más</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex;margin-top: 1%;color:#008acc">
+            <div style="margin-left: 12%;"><a id="btn-left-carrusel-2" style="cursor: pointer;"><i
+                        class="fa-solid fa-chevron-left"></i></a>
+            </div>
+            <div style="margin-left: 2%;;"><a id="btn-right-carrusel-2" style="cursor: pointer;"><i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+        <!-------------------->
+    </section>
+
+    <section class="Nuestros-productos">
+        <div class="A-Unclick-content nuestro-producto">
+            <h1>Nuestros productos digitales</h1>
+        </div>
+        <div class="A-Unclick-content nuestro-producto" style="margin-top: 0%;">
+            <p>Solicítalos en minutos y desde donde estés</p>
+        </div>
+        <!--Cuarto Carrusel-->
+        <div class="Carrusel-Productos">
+            <div style="margin-top:10%;font-size: 30px;margin-right: -4%;color:#008acc" class="flechasProductos">
+                <a id="btn-left-carrusel-3" style="cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></a>
+            </div>
+            <div class="carousel-productos-opciones" id="carrusel-3">
+                <div class="carousel-productos-elementos">
+                    <div>
+                        <img src="\img\productos-1.webp" alt="">
+                        <div class="carousel-productos-fondo" style="background: #e8ffd4;">
+                            <div style=" text-align: center;padding-top: 120px;" class="content-productos">
+                                <h3>Occiauto</h3>
+                                <p>Crédito de vehículo en línea en 5 minutos y sin papeles.</p>
+                                <button style="margin-top: 2%;">Solicítalo aquí</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-productos-elementos">
+                    <div>
+                        <img src="\img\productos-2.webp" alt="">
+                        <div class="carousel-productos-fondo" style="background: #b9e3ff;">
+                            <div style=" text-align: center;padding-top: 100px;" class="content-productos">
+                                <h3>Libre Inversión</h3>
+                                <p>Diligencia tus datos principales y recibe tu aprobación de inmediato, sin papeles y
+                                    sin filas.</p>
+                                <button style="margin-top: 2%;">Solicítalo aquí</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-productos-elementos">
+                    <div>
+                        <img src="\img\productos-3.webp" alt="">
+                        <div class="carousel-productos-fondo" style="background: #fae1c7;">
+                            <div style=" text-align: center;padding-top: 100px;" class="content-productos">
+                                <h3>Vivienda</h3>
+                                <p>¡Te acompañamos a cumplir tu sueño!, en minutos y sin papeleos.</p>
+                                <button style="margin-top: 2%;">Solicítalo aquí</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-productos-elementos">
+                    <div>
+                        <img src="\img\productos-4.webp" alt="">
+                        <div class="carousel-productos-fondo" style="background: #f8dcfd;">
+                            <div style=" text-align: center;padding-top: 100px;" class="content-productos">
+                                <h3>Cuenta de Ahorros</h3>
+                                <p>Solicita tu cuenta con increíbles beneficios y empieza a ahorrar con nosotros</p>
+                                <button style="margin-top: 2%;">Abre tu cuenta</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-productos-elementos">
+                    <div>
+                        <img src="\img\productos-5.webp" alt="">
+                        <div class="carousel-productos-fondo" style="background: #e8ffd4;">
+                            <div style=" text-align: center;padding-top: 120px;" class="content-productos">
+                                <h3>CDT</h3>
+                                <p>¡Haz crecer tu dinero de forma fácil y rápida!</p>
+                                <button style="margin-top: 2%;">Abre tu CDT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:10%;font-size: 30px;margin-left: -4%;color:#008acc" class="flechasProductos">
+                <a id="btn-right-carrusel-3" style="cursor: pointer;"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="carousel-indicadores">
+                <button class="indicador" data-index="0"></button>
+                <button class="indicador" data-index="1"></button>
+                <button class="indicador" data-index="2"></button>
+                <button class="indicador" data-index="3"></button>
+                <button class="indicador" data-index="4"></button>
+            </div>
+        </div>
+        <!------------->
+    </section>
+
+    <section class="final">
+        <div style="margin-top: 3%;">
+            <div class="final-invertir">
+                <p><span>TRM</span> 4,172.76<i class="bi bi-caret-up-fill"
+                        style="color:rgb(81, 219, 81);margin-left: 2%;"></i></p>
+
+                <p><span>WTI</span> 62.63<i class="bi bi-caret-right-fill"></i></p>
+
+                <p><span>IBR ON</span> 9.499<i class="bi bi-caret-right-fill"></i></p>
+
+                <p style="margin-left:50%;"><span>DTF EA</span> 9.16<i class="bi bi-caret-right-fill"></i></p>
+
+                <button style="margin-right: -60%;margin-top: -200px;">INVERTIR</button>
+            </div>
+            <div class="final-contactos">
+
+                <img src="\img\final-1.png" alt="">
+
+                <div>
+                    <h3>Líneas de Servicio al cliente</h3>
+                    <p>Nacional <span> 01 800 05 14652</span></p>
+                    <p>Bogotá <span> (601) 3902058</span></p>
+                    <p><span>Defensor del Consumidor Financiero</span></p>
+                </div>
+
+                <div>
+                    <h3>Líneas de Conciliación y Negociación</h3>
+                    <p>Desde tu celular<span> #626</span></p>
+                    <p>Bogotá <span> (601) 7443838</span></p>
+                    <p>Nacional <span> 01 8000 522626</span></p>
+                </div>
+                <div>
+                    <h3>Institucional</h3>
+                    <p style="font-weight: bold; cursor: pointer;">Línea Ética</p>
+                    <p style="font-weight: bold;cursor: pointer;">Educación Financiera</p>
+                    <p style="font-weight: bold;cursor: pointer;">Política de Tratamiento de Datos</p>
+                    <p style="font-weight: bold;cursor: pointer;">Sostenibilidad</p>
+                </div>
+            </div>
+            <div class="redes">
+                <h5>Síguenos en</h5>
+                <img src="\img\redes-1.png" style="width: 250px;cursor: pointer;">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <img src="\img\footer-1.webp" style="margin-left: 0.5%;" alt="">
+        <div class="footer-logos-wrapper">
+            <div class="footer-logos fila-1">
+                <img src="\img/logo-1.webp" alt="">
+                <img src="\img/logo-2.webp" alt="">
+                <img src="\img/logo-3.webp" alt="">
+                <img src="\img/logo-4.webp" alt="">
+                <img src="\img/logo-5.webp" alt="">
+                <img src="\img/logo-6.webp" alt="">
+                <img src="\img/logo-7.webp" alt="">
+                <img src="\img/logo-8.webp" alt="">
+            </div>
+            <div class="footer-logos fila-2">
+                <img src="\img/logo-9.webp" alt="">
+                <img src="\img/logo-10.webp" alt="">
+            </div>
+        </div>
+        <div style="text-align: center;margin-top: -5%;">
+            <p class="d-inline-flex gap-1">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample"
+                    style="background-color: transparent;border: 0px;">
+                    Conoce Más Servicios <i class="bi bi-caret-down-fill"></i>
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body bg-transparent border-0" style="width: 70%;margin: auto;">
+                    <div class="row text-white">
+                        <div class="col-md-3 mb-3">
+                            <h5 class="footer-title">Institucional</h5>
+                            <p>Defensor del Consumidor Financiero</p>
+                            <p>Información al Inversionista</p>
+                            <p>Información al Proveedor</p>
+                            <p>Transparencia y Acceso a la Información</p>
+                            <p>Filiales y Vinculadas</p>
+                            <p>Planeta Azul</p>
+                            <p class="fw-bold">Educación Financiera</p>
+                            <p class="fw-bold">Línea Ética</p>
+                            <p class="fw-bold">Línea ética Grupo AVAL</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h5 class="footer-title">Productos y Servicios</h5>
+                            <p>Para Personas</p>
+                            <p>Para Empresas</p>
+                            <p>Canales y Transacciones</p>
+                            <p>Disponibilidad de Canales</p>
+                            <p>Servicios Aval</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h5 class="footer-title">Otros</h5>
+                            <p>Horarios de oficinas</p>
+                            <p>Únete a nuestro Equipo</p>
+                            <p>Mapa del Sitio</p>
+                            <p>Licitación Bancaseguros</p>
+                            <p>Tarifas Personas 2025</p>
+                            <p>Tarifas Empresas 2025</p>
+                            <p>Notificaciones judiciales</p>
+                            <p>Certificación Subcapitalización</p>
+                            <p>Paquete Mínimo de Servicios</p>
+                            <p>Empleo para la vida</p>
+                            <p>Borrón y cuenta nueva</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <h5 class="footer-title">Políticas</h5>
+                            <p>Formulario Selección de Canales</p>
+                            <p>Términos y Condiciones</p>
+                            <p>Políticas de Redes Sociales</p>
+                            <p>Políticas de Cookies</p>
+                            <p>Política de Tratamiento de Datos Personales</p>
+                            <p>Reversión de Pagos</p>
+                            <p>Fogafín</p>
+                            <p>Consumidor Financiero</p>
+                            <p>Derechos del Consumidor Financiero</p>
+                            <p>Deberes del Banco</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="\carruseles.js"></script>
+    <script>
+        document.getElementById("logoutButton").addEventListener("click",async ()=>{
+            try{
+                const response =await fetch("/auth/logout",{method:"POST"});
+                if(response.ok){
+                    window.location.href="/";
+                }else{
+                    alert("Error al cerrar sesion");
+                }
+            } catch (error){
+                console.error("Error:",error);
+                alert("Error al cerrar sesion");
+            }
+        });
+    </script>
+</body>
+
+</html>
